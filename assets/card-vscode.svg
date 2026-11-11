@@ -21,8 +21,7 @@
     </style>
   </defs>
 
-  <!-- Border glow -->
-  <rect x="1" y="1" width="578" height="298" rx="12" fill="none" stroke="url(#borderGrad3)" stroke-width="2"/>
+
   <rect x="3" y="3" width="574" height="294" rx="11" fill="url(#cardBg3)"/>
 
   <!-- Background halo -->

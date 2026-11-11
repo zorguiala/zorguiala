@@ -21,8 +21,7 @@
     </style>
   </defs>
 
-  <!-- Border glow (outer rect with animated gradient stroke) -->
-  <rect x="1" y="1" width="578" height="298" rx="12" fill="none" stroke="url(#borderGrad)" stroke-width="2"/>
+
 
   <!-- Card body -->
   <rect x="3" y="3" width="574" height="294" rx="11" fill="url(#cardBg)"/>
