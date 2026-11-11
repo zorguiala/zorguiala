@@ -24,7 +24,7 @@
 
 
   <!-- Card body -->
-  <rect x="3" y="3" width="574" height="294" rx="11" fill="url(#cardBg)"/>
+  <rect x="0" y="0" width="580" height="300" rx="12" fill="url(#cardBg)"/>
 
   <!-- Pulsing halo background -->
   <circle cx="420" cy="140" fill="#a78bfa" opacity="0.08">

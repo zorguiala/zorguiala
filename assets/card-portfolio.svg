@@ -20,7 +20,7 @@
   </defs>
 
 
-  <rect x="3" y="3" width="574" height="294" rx="11" fill="url(#cardBg2)"/>
+  <rect x="0" y="0" width="580" height="300" rx="12" fill="url(#cardBg2)"/>
 
   <!-- Background halo -->
   <circle cx="430" cy="150" fill="#6366f1" opacity="0.07">

@@ -22,7 +22,7 @@
   </defs>
 
 
-  <rect x="3" y="3" width="574" height="294" rx="11" fill="url(#cardBg3)"/>
+  <rect x="0" y="0" width="580" height="300" rx="12" fill="url(#cardBg3)"/>
 
   <!-- Background halo -->
   <circle cx="430" cy="175" fill="#3fb950" opacity="0.06">
