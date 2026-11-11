@@ -80,9 +80,7 @@
     </text>
   </g>
 
-  <!-- CTA -->
-  <a href="https://marketplace.visualstudio.com/items?itemName=Alaeddinezorgui.nice-on-success">
-    <rect x="460" y="258" width="100" height="30" rx="15" fill="#21262d" stroke="#30363d" stroke-width="1"/>
-    <text x="510" y="277" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f0f6fc" text-anchor="middle">Install →</text>
-  </a>
+  <!-- CTA (link handled in README wrapper) -->
+  <rect x="460" y="258" width="100" height="30" rx="15" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="510" y="277" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f0f6fc" text-anchor="middle">Install →</text>
 </svg>

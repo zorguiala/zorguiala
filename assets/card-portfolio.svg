@@ -73,9 +73,7 @@
     <animate attributeName="cy" values="140;130;140" dur="5s" repeatCount="indefinite"/>
   </circle>
 
-  <!-- CTA -->
-  <a href="https://alaeddine.online/">
-    <rect x="460" y="258" width="100" height="30" rx="15" fill="#21262d" stroke="#30363d" stroke-width="1"/>
-    <text x="510" y="277" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f0f6fc" text-anchor="middle">Visit →</text>
-  </a>
+  <!-- CTA (link handled in README wrapper) -->
+  <rect x="460" y="258" width="100" height="30" rx="15" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="510" y="277" font-family="'Segoe UI', sans-serif" font-size="12" fill="#f0f6fc" text-anchor="middle">Visit →</text>
 </svg>

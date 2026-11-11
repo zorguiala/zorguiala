@@ -37,22 +37,19 @@ Contributed to internal products and frontend infrastructure supporting Toptal's
 ## 🚀 Personal Projects
 
 <div align="center">
-  <img src="./assets/card-mcp.svg" alt="Odoo MCP Server" width="49%"/>
-  <img src="./assets/card-portfolio.svg" alt="Interactive 3D Portfolio" width="49%"/>
+  <a href="https://github.com/zorguiala/Odoo-MCP">
+    <img src="./assets/card-mcp.svg" alt="Odoo MCP Server" width="49%"/>
+  </a>
+  <a href="https://alaeddine.online/">
+    <img src="./assets/card-portfolio.svg" alt="Interactive 3D Portfolio" width="49%"/>
+  </a>
 </div>
 
 <div align="center" style="margin-top:12px">
-  <img src="./assets/card-vscode.svg" alt="NICE on Success VS Code Extension" width="49%"/>
+  <a href="https://marketplace.visualstudio.com/items?itemName=Alaeddinezorgui.nice-on-success">
+    <img src="./assets/card-vscode.svg" alt="NICE on Success VS Code Extension" width="49%"/>
+  </a>
 </div>
-
-### [Odoo MCP](https://github.com/zorguiala/Odoo-MCP)
-A Node.js and TypeScript MCP server connecting Odoo ERP with AI assistants, enabling natural-language interactions with business data.
-
-### [Interactive 3D Portfolio](https://alaeddine.online/)
-A personal portfolio built with React and Three.js, featuring interactive 3D elements.
-
-### [NICE on Success](https://marketplace.visualstudio.com/items?itemName=Alaeddinezorgui.nice-on-success)
-A VS Code extension that adds audio feedback when terminal tasks finish — stay in flow state.
 
 ---
 
@@ -67,4 +64,16 @@ A VS Code extension that adds audio feedback when terminal tasks finish — stay
 
 <div align="center">
   <img src="./assets/footer.svg" alt="Let's connect" width="100%"/>
+</div>
+
+<div align="center">
+  <a href="https://www.linkedin.com/in/zorgui-alaeddine/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>&nbsp;&nbsp;
+  <a href="https://alaeddine.online/">
+    <img src="https://img.shields.io/badge/Portfolio-7C3AED?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/>
+  </a>&nbsp;&nbsp;
+  <a href="https://github.com/zorguiala">
+    <img src="https://img.shields.io/badge/GitHub-21262D?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
 </div>
