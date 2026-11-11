@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Animated headline gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="200%" y2="0%">
+      <stop offset="0%" style="stop-color:#61dafb" />
+      <stop offset="33%" style="stop-color:#a78bfa" />
+      <stop offset="66%" style="stop-color:#38bdf8" />
+      <stop offset="100%" style="stop-color:#61dafb" />
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;-1 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Blob filters -->
+    <filter id="blur1"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="30"/></filter>
+
+    <!-- Clipping for typing animation -->
+    <!-- phrase 1: "npx create-next-app" (19 chars) -->
+    <clipPath id="clip1">
+      <rect x="0" y="0" height="30">
+        <animate attributeName="width"
+          values="0;0;0;0;0;152;152;152;152;152;152;152;152;0;0;0;0;0;0;0;0;0;0;0;0;0;0"
+          keyTimes="0;0.02;0.04;0.06;0.08;0.15;0.25;0.30;0.35;0.40;0.45;0.50;0.52;0.57;0.59;0.61;0.63;0.65;0.67;0.69;0.71;0.80;0.90;0.95;0.97;0.99;1"
+          calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <!-- phrase 2: "building Odoo MCP server" -->
+    <clipPath id="clip2">
+      <rect x="0" y="0" height="30">
+        <animate attributeName="width"
+          values="0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;192;192;192;192;0;0;0;0;0;0"
+          keyTimes="0;0.02;0.04;0.06;0.08;0.15;0.25;0.30;0.35;0.40;0.45;0.50;0.52;0.57;0.59;0.61;0.63;0.65;0.67;0.69;0.71;0.80;0.90;0.95;0.97;0.99;1"
+          calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <!-- phrase 3: "crafting UI components" -->
+    <clipPath id="clip3">
+      <rect x="0" y="0" height="30">
+        <animate attributeName="width"
+          values="0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;176;176;0;0;0"
+          keyTimes="0;0.02;0.04;0.06;0.08;0.15;0.25;0.30;0.35;0.40;0.45;0.50;0.52;0.57;0.59;0.61;0.63;0.65;0.67;0.69;0.71;0.80;0.90;0.95;0.97;0.99;1"
+          calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+
+    <style>
+      @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      @keyframes drift1 { 0%{transform:translate(0,0)} 50%{transform:translate(40px,-30px)} 100%{transform:translate(0,0)} }
+      @keyframes drift2 { 0%{transform:translate(0,0)} 50%{transform:translate(-30px,20px)} 100%{transform:translate(0,0)} }
+      @keyframes drift3 { 0%{transform:translate(0,0)} 50%{transform:translate(20px,40px)} 100%{transform:translate(0,0)} }
+      @keyframes pulse { 0%,100%{opacity:1;r:5} 50%{opacity:0.4;r:7} }
+      @keyframes wave { 0%{transform:rotate(0deg)} 20%{transform:rotate(16deg)} 40%{transform:rotate(-8deg)} 60%{transform:rotate(16deg)} 80%{transform:rotate(-4deg)} 100%{transform:rotate(0deg)} }
+      @keyframes orbitA { from{transform:rotate(0deg) translateX(100px) rotate(0deg)} to{transform:rotate(360deg) translateX(100px) rotate(-360deg)} }
+      @keyframes orbitB { from{transform:rotate(120deg) translateX(130px) rotate(-120deg)} to{transform:rotate(480deg) translateX(130px) rotate(-480deg)} }
+      @keyframes orbitC { from{transform:rotate(240deg) translateX(80px) rotate(-240deg)} to{transform:rotate(600deg) translateX(80px) rotate(-600deg)} }
+      @keyframes nodeGlow { 0%,100%{opacity:0.5;r:4} 50%{opacity:1;r:6} }
+      .caret { animation: blink 1s step-end infinite; }
+      .blob1 { animation: drift1 14s ease-in-out infinite; }
+      .blob2 { animation: drift2 17s ease-in-out infinite; }
+      .blob3 { animation: drift3 19s ease-in-out infinite; }
+      .statusDot { animation: pulse 1.6s ease-in-out infinite; }
+      .hand { display:inline-block; animation: wave 2.5s ease-in-out infinite; transform-origin: 70% 70%; }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Subtle grid -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="400" fill="url(#grid)" rx="12" opacity="0.5"/>
+
+  <!-- Ambient blobs -->
+  <circle class="blob1" cx="150" cy="200" r="140" fill="#7c3aed" opacity="0.12" filter="url(#blur1)"/>
+  <circle class="blob2" cx="600" cy="100" r="100" fill="#0891b2" opacity="0.1" filter="url(#blur2)"/>
+  <circle class="blob3" cx="1050" cy="300" r="120" fill="#a78bfa" opacity="0.1" filter="url(#blur1)"/>
+
+  <!-- === LEFT CONTENT PANEL === -->
+
+  <!-- Name + Wave -->
+  <text x="60" y="90" font-family="'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="700" fill="white">Alaeddine Zorgui</text>
+  <!-- Waving hand -->
+  <text x="370" y="90" font-size="34" class="hand">👋</text>
+
+  <!-- Status pill -->
+  <rect x="60" y="108" width="230" height="28" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <circle class="statusDot" cx="80" cy="122" r="5" fill="#3fb950"/>
+  <text x="93" y="127" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#7ee787" font-weight="600" letter-spacing="1">FRONTEND ENGINEER</text>
+
+  <!-- Tagline with animated gradient -->
+  <text x="60" y="175" font-family="'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="700" fill="url(#textGrad)">Building reliable web experiences</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="210" font-family="'Segoe UI', system-ui, sans-serif" font-size="15" fill="#8b949e">React · TypeScript · GraphQL · Node.js · MCP</text>
+
+  <!-- === TERMINAL BLOCK === -->
+  <rect x="60" y="235" width="520" height="110" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <!-- Terminal title bar -->
+  <rect x="60" y="235" width="520" height="28" rx="8" fill="#161b22"/>
+  <rect x="60" y="251" width="520" height="12" fill="#161b22"/>
+  <circle cx="82" cy="249" r="6" fill="#ff5f57"/>
+  <circle cx="102" cy="249" r="6" fill="#ffbd2e"/>
+  <circle cx="122" cy="249" r="6" fill="#28c840"/>
+  <text x="260" y="253" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">zsh — zorguiala</text>
+
+  <!-- Terminal prompt line 1 -->
+  <text x="80" y="286" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#3fb950">➜</text>
+  <text x="100" y="286" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#61dafb">~/projects</text>
+  <text x="175" y="286" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#f0f6fc">$ </text>
+
+  <!-- Typing text phrases (overlaid, clipped) -->
+  <g clip-path="url(#clip1)">
+    <text x="195" y="286" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#f0f6fc">npx create-next-app</text>
+  </g>
+  <g clip-path="url(#clip2)">
+    <text x="195" y="286" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#f0f6fc">building Odoo MCP server</text>
+  </g>
+  <g clip-path="url(#clip3)">
+    <text x="195" y="286" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#f0f6fc">crafting UI components</text>
+  </g>
+
+  <!-- Blinking caret -->
+  <rect class="caret" x="195" y="273" width="8" height="16" rx="1" fill="#61dafb">
+    <animate attributeName="x"
+      values="195;347;347;195;195;195;195;387;387;195;195;195;195;371;371;195;195"
+      keyTimes="0;0.15;0.52;0.57;0.59;0.63;0.65;0.69;0.71;0.80;0.82;0.84;0.90;0.95;0.97;0.99;1"
+      calcMode="discrete" dur="20s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Terminal line 2 -->
+  <text x="80" y="315" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#3fb950">➜</text>
+  <text x="100" y="315" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#61dafb">~/projects</text>
+  <text x="175" y="315" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="13" fill="#8b949e">$ git push --force-with-lease 🚀</text>
+
+  <!-- Terminal line 3 (output) -->
+  <text x="80" y="336" font-family="'JetBrains Mono', 'Cascadia Code', monospace" font-size="12" fill="#7ee787">✓ Branch 'main' up-to-date with origin</text>
+
+  <!-- === RIGHT SIDE: Orbiting Tech Atoms === -->
+  <g transform="translate(970, 200)">
+    <!-- Orbit ellipses -->
+    <ellipse cx="0" cy="0" rx="100" ry="38" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="4 4" transform="rotate(-20)"/>
+    <ellipse cx="0" cy="0" rx="130" ry="45" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="4 4" transform="rotate(40)"/>
+    <ellipse cx="0" cy="0" rx="80" ry="30" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="4 4" transform="rotate(80)"/>
+
+    <!-- Center React logo -->
+    <circle cx="0" cy="0" r="28" fill="#0d1117" stroke="#61dafb" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="#61dafb"/>
+    <!-- React arcs -->
+    <ellipse cx="0" cy="0" rx="22" ry="8" fill="none" stroke="#61dafb" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="22" ry="8" fill="none" stroke="#61dafb" stroke-width="1.5" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="22" ry="8" fill="none" stroke="#61dafb" stroke-width="1.5" transform="rotate(120)"/>
+
+    <!-- Orbit A: TypeScript -->
+    <g style="animation: orbitA 8s linear infinite; transform-origin: 0 0;">
+      <circle r="16" fill="#3178c6"/>
+      <text y="4" font-family="monospace" font-size="9" fill="white" text-anchor="middle" font-weight="700">TS</text>
+    </g>
+
+    <!-- Orbit B: Node.js -->
+    <g style="animation: orbitB 12s linear infinite; transform-origin: 0 0;">
+      <circle r="14" fill="#3c873a"/>
+      <text y="4" font-family="monospace" font-size="8" fill="white" text-anchor="middle" font-weight="700">Node</text>
+    </g>
+
+    <!-- Orbit C: GraphQL -->
+    <g style="animation: orbitC 7s linear infinite; transform-origin: 0 0;">
+      <circle r="13" fill="#e535ab"/>
+      <text y="4" font-family="monospace" font-size="8" fill="white" text-anchor="middle" font-weight="700">GQL</text>
+    </g>
+  </g>
+
+  <!-- === BOTTOM STATS ROW === -->
+  <line x1="60" y1="362" x2="1140" y2="362" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Stat 1 -->
+  <text x="100" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc" text-anchor="middle">5+</text>
+  <text x="100" y="400" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Years Exp.</text>
+
+  <!-- Stat 2 -->
+  <text x="300" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc" text-anchor="middle">Toptal</text>
+  <text x="300" y="400" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Core Team</text>
+
+  <!-- Stat 3 -->
+  <text x="600" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc" text-anchor="middle">React · TS · GraphQL</text>
+  <text x="600" y="400" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Primary Stack</text>
+
+  <!-- Stat 4 -->
+  <text x="950" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc" text-anchor="middle">MCP · AI</text>
+  <text x="950" y="400" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Currently Exploring</text>
+
+  <!-- Stat 5 -->
+  <text x="1100" y="385" font-family="'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="700" fill="#7ee787" text-anchor="middle">Open</text>
+  <text x="1100" y="400" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">to Collaborate</text>
+</svg>
